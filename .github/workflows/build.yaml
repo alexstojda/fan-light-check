@@ -35,7 +35,7 @@ jobs:
     - name: upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: binary
+        name: fan-light-check
         path: ./build/fan-light-check
 
   publish:
@@ -54,8 +54,8 @@ jobs:
       - name: download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: binary
-          path: ./build/fan-light-check
+          name: fan-light-check
+          path: ./build
       
       - name: Conventional Changelog Action
         id: changelog
